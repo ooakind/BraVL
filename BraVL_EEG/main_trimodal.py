@@ -1,6 +1,6 @@
 import sys
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '5'
+# os.environ['CUDA_VISIBLE_DEVICES'] = '3' # NOTE: set to 3
 import json
 import torch
 from run_epochs_trimodal import run_epochs_trimodal

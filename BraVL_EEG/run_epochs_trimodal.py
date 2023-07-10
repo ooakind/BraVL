@@ -449,7 +449,7 @@ def update_Qnet(exp, batch):
     intra_mi = -mutual_info(exp, px_zs, z)
     return intra_mi
 
-def train_aug(epoch, exp, tb_logger):
+def train_aug(epoch, exp, tb_logger): # Augmentation training
     mm_vae = exp.mm_vae
     mm_vae.train()
     exp.mm_vae = mm_vae
@@ -552,7 +552,7 @@ def train_aug(epoch, exp, tb_logger):
     elif exp.flags.aug_type == 'no_aug':
         print('aug type: no augmentation')
 
-def train(epoch, exp, tb_logger):
+def train(epoch, exp, tb_logger): # Trimodal (seen) & Bimodal (novel) training
     mm_vae = exp.mm_vae
     mm_vae.train()
     exp.mm_vae = mm_vae
